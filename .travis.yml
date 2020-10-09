@@ -8,4 +8,6 @@ matrix:
       osx_image: xcode10.2
       language: shell
 
-script: python3 -m unittest test.py || python -m unittest test.py
+script:
+  - echo ${TRAVIS_PYTHON_VERSION}
+  - python3 -m unittest test.py || python -m unittest test.py
