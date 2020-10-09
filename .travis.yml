@@ -9,5 +9,5 @@ matrix:
       language: shell
 
 script:
-  - echo ${TRAVIS_PYTHON_VERSION}
+  - echo ${TRAVIS_PYTHON_VERSION//.}
   - python3 -m unittest test.py || python -m unittest test.py
